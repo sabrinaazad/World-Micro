@@ -1,0 +1,228 @@
+/*
+FOOTER CSS
+*/
+
+footer {
+	background-color: $darkgray;
+	padding: 4em 1em 1em;
+	a {
+    	&:after {
+    		content: none;
+    	}
+    }
+    hr {
+    	opacity: 0.72;
+    	border-color: $mobilenavgray;
+    }
+    .footer-wrapper {
+    	max-width: 1440px;
+    	margin: 0 auto;
+    	.footer-bar {
+    		display: flex;
+		    justify-content: space-evenly;
+		    align-items: center;
+    		.footer-bar__logo {
+    			width: 12em;
+    		}
+    		.separator {
+    			height: 1.5em;
+    			border: 1px solid $hr;
+    		}
+    		.footer-bar__number {
+    			color: $white;
+    			font-size: 1.2em;
+    			&:hover {
+		    		color: $orange;
+		    	}
+    		}
+    	}
+    	.title {
+    		color: $white;
+    		text-transform: uppercase;
+    		font-size: 1.2em;
+    		font-family: heeboRegular; 
+    	}
+    	.footer-nav {
+    		list-style: none;
+		    padding: 0;
+		    text-align: center;
+		    margin-bottom: 0;
+		    li {  	
+		    	font-size: 1.2em;
+		    	padding: 0.5em;
+		    	a {
+		    		color: $white;
+		    		&:hover {
+		    			color: $orange;
+		    		}
+		    	}
+		    }
+    	}
+    	.footer-secondary-nav {
+    		list-style: none;
+		    padding: 0;
+		    text-align: center;
+		    margin-top: 0;
+		    li {
+		    	font-size: 1.2em;
+		    	padding: 0.25em;
+		    	&.uppercase {
+		    		a {
+		    			text-transform: uppercase;
+		    			font-family: heeboBold; 
+		    		}
+		    	}
+		    	a {
+		    		color: $white;
+		    		text-transform: capitalize;
+		    		font-family: heeboLight; 
+		    		&:hover {
+		    			color: $orange;
+		    		}
+		    	}
+		    }
+    	}
+    	.footer-widget-wrapper {
+    		display: flex;
+		    flex-direction: column;
+		    align-items: center;
+		    color: $white;
+    		.textwidget ul {
+    			list-style: none;
+    			.title {
+    				text-align: left;
+    				position: relative;
+    				color: $white;
+    				&:before {
+    					content: "\f3c5";
+    					font-family: fontawesome;
+    					color: $orange;
+    					position: absolute;
+					    left: -1em;
+					    font-size: 2em;
+					    top: 0;
+    				}
+    			}
+    			.address {
+    				text-transform: capitalize;
+    				text-align: left;
+    				font-family: heeboLight; 
+    				font-size: 1em;
+    				padding-bottom: 1rem;
+    			}
+    		}
+    	}
+    	.footer-nav__logo-wrapper {
+    		text-align: center;
+    		.footer-bar__logo {
+    			padding: 1em;
+                max-height: 7em;
+    		}
+    	}
+    	.footer-nav__social-wrapper {
+    		text-align: center;
+    		p {
+    			color: $footertextgray;
+    			font-family: heeboLight;
+    			text-transform: capitalize;
+                font-size: 0.85em;
+    		}
+    		.title {
+    			padding: 1em 0;
+    			display: block;
+    			&.desktop {
+    				display: none;
+    			}
+    		}
+    		.social-icons {
+    			display: flex;
+    			justify-content: space-evenly;
+    			align-items: center;
+    		}
+    	}
+    }
+    @include tablet {
+    	.footer-wrapper {
+    		hr {
+    			display: none;
+    		}
+    		.footer-bar {
+    			padding-left: 2em;
+	    		justify-content: flex-start;
+	    		.separator {
+				    margin: 0 1em;
+				}
+			}
+			.footer-nav-container {
+				display: flex;
+				justify-content: space-evenly;
+				.footer-nav, .footer-secondary-nav {
+					text-align: left;
+					margin: 1em 0;
+				}
+				.footer-secondary-nav {
+					.title {
+						padding: 0.5em;
+					}
+				}
+                .footer-nav__drawer:nth-child(2) {
+                    border-right: 1px solid $footerhr;
+                }
+			}
+            .footer-nav__drawer .footer-nav__logo-wrapper {
+                 border-top: 1px solid $footerhr;
+                 padding: 1em 0;
+            }
+			.footer-widget-wrapper {
+				    flex-direction: row;
+				    align-items: baseline;
+				    padding-top: 0.5em;
+				    width: 40em;
+				.title {
+					text-align: left;
+				}
+				.textwidget ul {
+					max-height: 15em;
+				    flex-wrap: wrap;
+				    display: flex;
+				    flex-direction: column;
+				    li:nth-child(4) {
+				    	padding-bottom: 3.1em;
+				    }
+				    li:nth-child(n+5) {
+				    	margin-left: 4rem;
+				    }
+				}
+			}
+			.footer-nav__social-wrapper {
+				display: flex;
+    			justify-content: space-between;
+                align-items: center;
+    			border-top: 1px solid $footerhr;
+    			padding-top: 1em;
+    			.title.mobile {
+    				display: none;
+    			}
+    			.title.desktop {
+    				display: block;
+    			}
+    			.social-icons {
+    				a {
+    					padding: 0.5em;
+    					img {
+    						width: 2em;
+    					}
+    				}
+    			}
+			}
+    	}
+    }
+    @include desktop { 
+    	.footer-nav__drawer {
+    		padding: 0 2em;
+    		.footer-bar {
+    			padding-left: 2em;
+    		}
+    	}
+    }
+}

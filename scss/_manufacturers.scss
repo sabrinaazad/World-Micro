@@ -1,0 +1,162 @@
+/*
+MANUFACTURERS CSS
+*/
+
+/*HERO*/
+.single-manufacturers .main {
+	padding: 2em 0 3em;
+}
+.manufacturer-wrapper {
+
+	.sidebar-wrapper {
+		display: flex;
+    	justify-content: center;
+    	flex-direction: column;
+    	padding-bottom: 2em;
+    	h3 {
+    		border-bottom: 1px solid $gray;
+    		padding-bottom: 1.35em;
+    	}
+    	ul {
+
+    		list-style: none;
+    		margin: 0;
+    		padding-left: 0
+    	}
+    	select {
+    		border: 1px solid $darkgray;
+    		border: 1px solid #222222;
+		    border-radius: 0;
+		    padding: 0.5em;
+    	}
+	}
+	.header-wrapper {
+		display: flex;
+	    justify-content: space-between;
+	    align-items: center;
+	    flex-direction: column;
+	    border-bottom: 1px solid $gray;
+    	padding-bottom: 0.5em;
+		.button-secondary {
+            &:after {
+            	margin-top: 0.5em;
+            	color: $white;
+                content: url(/wp-content/uploads/download-icon-white.png);
+            }
+            &:hover:after {
+            	transition: none;
+            	margin-left: 1em;
+            }
+        }
+	}
+	.content-wrapper {
+		.manufacturers-list {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			list-style: none;
+			justify-content: center;
+			padding-left: 0;
+			a {
+				text-transform: initial;
+				font-family: HeeboRegular;
+				border: 1px solid $gray;
+				display: flex;
+			    flex-direction: row;
+			    flex-wrap: wrap;
+			    max-width: 25em;
+			    padding: 1em;
+			    margin-right: 1em;
+			    margin-bottom: 1em;
+			    flex: 1 0 50%;
+			    @include transitionAll;
+				&:after {
+					content: none;
+				}
+				&:hover {
+					color: $baseColor;
+					@include dropShadow;
+					@include transitionAll;
+				}
+				li {
+					display: flex;
+				    flex-direction: column;
+				    justify-content: space-between;
+					h3 {
+						margin: 0;
+					}
+					div {
+						width: 100%;
+    					text-align: center;
+						img {
+							margin: 1em 0;
+						    max-height: 4em;
+						    width: auto;
+						    max-width: 100%;
+						}
+					}
+				}
+			}
+		}
+	}
+	@include tablet {
+		.sidebar-wrapper {
+			justify-content: flex-start;
+			a {
+				font-size: 0.7rem;
+			}
+		}
+		.header-wrapper {
+			flex-direction: row;
+		}
+		.content-wrapper .manufacturers-list {
+			justify-content: flex-start;
+			a {
+				flex: 0 0 30%;
+			}
+		} 
+	}
+}
+
+@media (min-width: 1400px) {
+    .container {
+        width: 1370px;
+    }
+}
+
+.single-manufacturer {
+	padding: 1em 0;
+	.button-secondary {
+		max-width: 26em;
+		&:after {
+			content: url(/wp-content/uploads/download-icon-white.png);
+		}
+	}
+}
+.single-manufacturers .qandc-wrapper {
+	display: flex;
+    flex-direction: column;
+	.ribbon {
+		padding: 0.5em 0 ;
+		width: 15em;
+		img {
+			max-width: 100%;
+		    max-height: 100%;
+		    width: auto;
+		    height: auto;
+		}
+	}
+	h3 {
+		color: $darkblue;
+	}
+	p {
+		color: $baseColor;
+	}
+}
+.card-section {
+	background-color: $lightgray;
+	.card-wrapper {
+		padding-top: 2em;
+    	padding-bottom: 2em;
+	}
+}

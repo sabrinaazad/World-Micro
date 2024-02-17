@@ -1,0 +1,25 @@
+/*
+INDUSTRIES CSS
+*/
+
+/*HERO*/
+
+.single-post {
+	padding: 2em 0 0;
+	.single-industries {
+		padding: 1em 0 4em;
+		.button-secondary {
+			max-width: max-content;
+			&:after {
+				content: url(/wp-content/uploads/download-icon-white.png);
+			}
+		}
+	}
+	.card-section {
+		background-color: $lightgray;
+		.card-wrapper {
+			padding-top: 2em;
+		   	padding-bottom: 2em;
+		}
+	}		
+}

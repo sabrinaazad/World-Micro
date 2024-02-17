@@ -1,0 +1,417 @@
+/*
+HOMEPAGE CSS
+*/
+
+/*HERO*/
+
+.homepage {
+	margin-top:-5.1em;
+	.hero {
+		.hero-wrapper {
+			background-position: center;
+			background-size: cover;
+			padding: 1em 10vw;
+			color: $white;
+			height: calc(100vh);
+			min-height: 41.75em;
+			display: flex; 
+			align-items: center;
+			.text-container {
+			 	font-size: 1em;
+			 	h1 {
+			 		font-size: 2.5em;
+			 	}
+			 	.medium-paragraph {
+			 		font-size: 1.2em;
+			 		padding-bottom: 1em;
+			 	}
+			}
+		}
+	}
+	.sec1 {
+		margin-top: -3.45em;
+		position: relative;
+		.bg-image {	  
+		    height: 100%;
+		    width: 100%;
+		    position: absolute;
+		    background-size:cover;
+		    
+		    filter: blur(5em);
+		  	-webkit-filter: blur(5em);
+		  	-moz-filter: blur(5em);
+		  	-o-filter: blur(5em);
+		  	-ms-filter: blur(5em);
+		  	backdrop-filter: blur(5em);
+		 	-webkit-backdrop-filter: blur(5em);
+		 	-moz-filter: blur(5em);
+		  	-o-filter: blur(5em);
+		  	-ms-filter: blur(5em);
+		    left: 0;
+		    //FIREFOX SPECIFIC CODE
+			    @-moz-document url-prefix() {
+				    background: rgba(0, 21, 40, 0.75);
+				    -webkit-filter: blur(0);
+				}
+			}
+		.home-slider-1 {
+			.slick-list {
+				overflow: visible;
+				// .slick-track {
+				// 	transform: none !important;
+				// }
+				.slick-slide {
+					.slide-wrapper {
+						text-align: center;
+						color: $white;
+						padding: 1em;
+						cursor: pointer;
+						text-transform: uppercase;
+						@include tablet {
+							font-size: 1em;
+						}
+						@include desktop {
+							font-size: 1.25em;
+						}
+						.desktop-underline {
+							position: relative;
+							padding-bottom: 0.65em;
+							border-bottom: 0.0em solid $orange;	
+						}
+					}
+					&.slick-current {
+						.slide-wrapper {
+							.desktop-underline {
+								border-bottom: 0.5em solid $orange;
+								&:after {
+									content:'';
+									position: absolute;
+									left: 50%;
+									margin-left: -0.5em;
+									width: 1em;
+									height: 1em;
+									bottom: -1em;
+									background: $orange;
+									transform: rotate(45deg);
+									border-top-left-radius: 1em;
+								}
+							}
+						}
+					}
+				}
+			}
+			.left-arrow {
+			    position: absolute;
+			    top: 1em;
+			    left: 0;
+			    z-index: 1;
+			}
+			.right-arrow {
+				position: absolute;
+			    top: 1em;
+			    right: 0;
+			    z-index: 1;
+			}	
+		}
+	}
+	.sec2 {
+		padding: 1em 1em 5em;
+		.heading {
+			display: flex;
+		    align-items: flex-start;
+		    justify-content: space-between;
+		    flex-direction: column;
+		    margin: 0.5rem;
+		}
+		.home-slider-2 {
+			.slide-wrapper {
+				display: flex;	    
+			    flex-wrap: wrap;
+			    justify-content: center;
+			    max-width: 1370px;
+			    margin: 0 auto;
+			}
+		}
+	}
+	.sec4 {
+		background-image: url(/wp-content/uploads/home-bg-2.png);
+		background-position: top;
+		background-size: cover;
+		padding: 5em 0;
+		.side-by-side {
+			display: flex;
+		    align-items: center;
+		    flex-flow: column;
+			.side-by-side__blurb {
+				margin: 1em;
+				flex: 1 0 0;
+			}
+			.side-by-side__image {
+				margin: 1em;
+				flex: 1 0 0;
+				img {
+					width: 100%;
+				}
+			}
+		}
+	}
+	.sec5 {
+		background-image: url(/wp-content/uploads/home-bg-3.png);
+		background-position: top;
+		background-size: cover;
+		padding: 0 0 5em 0;
+		.more {
+			color: $white;
+			&:after {
+				color: $white;
+			}
+		}
+		.heading {
+			display: flex;
+		    align-items: left;
+		    justify-content: space-between;
+		    flex-direction: column;
+		    color: $white;
+		    padding: 1em;
+		}
+		.home-slider-4 {
+			position: relative;
+			.slick-list {
+				width: 150%;
+				overflow: hidden;
+			}
+			.left-arrow {
+			    position: absolute;
+			    left: 1em;
+    			top: 100%;  
+			    z-index: 1;
+			}
+			.right-arrow {
+				position: absolute;
+			    left: 4em;
+    			top: 100%;
+			    z-index: 1;
+			}
+			.card--service {
+		        display: flex;
+		        flex-direction: column;
+		        padding: 1em;
+		        max-width: 25em;
+		        .card-header {
+		            min-height: 10rem;
+		            background-size: cover;
+		            background-repeat: no-repeat;
+		            background-color: $white;
+		            display: flex;
+		            align-items: flex-end;
+		            padding: 1em;
+		            @include transitionAll;
+		            .title {
+		                color: $white;
+		                text-transform: uppercase;
+		                font-family: heeboRegular, Helvetica, Arial, sans-serif; 
+		            }
+		        } 
+		        .card-content {
+		            min-height: 11rem;
+		            background-color: $white;
+		            border-bottom: 5px solid $white;
+		            padding: 1em;
+		            display: flex;
+		            flex-direction: column;
+		            justify-content: space-between;
+		            p   { 
+		                color: $baseColor; 
+		            }
+		            a {
+		                color: $orange;
+		                opacity: 0;
+		                @include transitionAll;
+		            }
+		        }
+		        &:hover {
+		            .card-content {
+		                border-bottom: 5px solid $orange;
+		                @include transitionAll;
+		                @include dropShadow;
+		                a {
+		                    opacity: 1;
+		                    @include transitionAll;
+		                }
+		            }
+		        }
+		    }	
+		}
+	}
+	.sec6 {
+		background-image: url(/wp-content/uploads/home-bg-4.png);
+		background-position: top;
+		background-size: cover;
+		padding: 5em 0;
+		.side-by-side {
+			display: flex;
+		    align-items: center;
+		    flex-flow: column;
+			.side-by-side__blurb {
+				margin: 1em;
+				flex: 1 0 0;
+				.side-by-side__blurb-list {
+					padding: 0;
+    				list-style: none;
+    				li {
+    					display: flex;
+    					align-items: center;
+    					img {
+    						padding: 0.5em 1em 0.5em 0.5em;
+    					}
+    				}
+				}
+			}
+			.side-by-side__image {
+				margin: 1em;
+				flex: 1 0 0;
+				img {
+					width: 100%;
+				}
+			}
+		}
+	}
+	.sec7 {
+		background-image: url(/wp-content/uploads/home-bg-5.png);
+		background-position: top;
+		background-size: cover;
+		padding: 5em 1em;
+		color: $white;
+		text-align: center;
+		.wm__numbers-wrapper {
+			display: flex;
+		    flex-wrap: wrap;
+		    justify-content: space-around;
+		    .img-wrap {
+    			height: 5em;
+		    }
+		    .number {
+		    	padding: 1em;
+		    	flex: 1 1 0;
+		    	display: flex;
+			    flex-direction: column;
+			    align-items: center;
+		    	.image {
+		    		padding: 0.5em;
+
+		    	}
+		    	.blurb {
+		    		text-transform: uppercase;
+		    		display: block;
+		    	}
+		    }
+		    .large-font {
+		    	font-size: 2em;
+		    	font-weight: $bold;
+		    	opacity: 0;
+		    	&.visible {
+		    		opacity: 1;
+		    	}
+		    }
+		}
+	}
+	@include tablet {
+		.hero {
+			.hero-wrapper {
+				background-position: center;
+				background-size: cover;
+				// padding: 15em 5em;
+				padding: 10vw 5vw;
+				color: $white;
+				min-height: 44vw;
+				.text-container {
+					// width: 44rem;
+					// font-size: 1.25em;
+					width: 44vw;
+    				font-size: 1.25vw;
+					h1 {
+						font-size: 3em;
+					}
+					.medium-paragraph {
+						font-size: 1.25em;
+						padding-bottom: 0;
+					}
+				}
+			}
+		}
+		.sec1 {
+			margin-top: -3.5em;
+			.home-slider-1 {
+				.slick-list {
+					overflow: visible;
+					.slick-track {
+						transform: none !important;
+					}
+				}
+			}
+		}
+		.sec2 {
+			.heading {
+				flex-direction: row;
+				align-items: center;
+			}
+		}
+		.sec4 {
+			.side-by-side {
+				flex-flow: row;
+			}
+		}
+		.sec5 {
+			padding: 5em 0;
+			.heading {
+				flex-direction: row;
+				align-items: center;
+				padding: 0 1em;
+			}
+			.home-slider-4 {
+				.left-arrow { 
+					left: 17em;
+    				top: -4em;
+				}
+				.right-arrow {
+					left: 20em;
+    				top: -4em;
+				}
+			}
+		}
+		.sec6 {
+			.side-by-side {
+				flex-flow: row;
+				.side-by-side__blurb { 
+					.side-by-side__blurb-list {
+						img {
+    						padding: 0 2em;
+    					}
+					}
+				}
+			}
+		}
+		.sec7 {
+			.wm__numbers-wrapper {
+			    .large-font {
+			    	font-size:3.5em;
+			    }
+			}
+		}
+	}
+	@include tabtodesk {
+		.sec5 .home-slider-4 .card--service .card-content {
+			min-height: 14rem;
+		}
+	}
+	@include desktop {
+		.sec1 {
+			margin-top: -4.35em;
+			.home-slider-1 {
+				//max-width: 80%;
+    			margin: 0 auto;
+			}
+		}
+	}
+
+}

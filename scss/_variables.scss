@@ -1,0 +1,78 @@
+/*
+VARIABLES CSS
+*/
+
+
+$baseColor: #4D4D4D;
+$mainFontSize: 16px;
+
+/*GENERAL COLORS*/
+$lightblue: #65BBE9;
+$blue: #77C9D4;
+$darkblue: #003A70;
+
+$green: #57BC90;
+$darkgreen: #015249;
+
+$lightgray:  #F9F9F9;
+$gray: #EFEFEF;
+$darkgray: #222222;
+
+$mobilenavgray: #8D8D8D;
+
+$footergray: #8D8D8D;
+$footertextgray: #bbbbbb;
+$footerhr: #313131;
+$hr: #707070;
+
+$orange: #E2761A;
+
+$white: #FFFFFF;
+
+$black: #000000;
+
+$transparent: rgba(255,255,255,0);
+
+$linkcolor: #5E5E5E;
+$linkhover: $orange;
+
+$btnprimarytextcolor: $white;
+$btnprimarycolor: $darkblue;
+$btnprimaryhovercolor: #002F5C;
+
+$btnsecondarytextcolor: $darkblue;
+$btnsecondarycolor: $white;
+$btnsecondaryhovercolor: #002F5C;
+
+$transitionTime: 300ms;
+$transitionType: ease;
+
+/*FONT WEIGHT*/
+$light: 300;
+$bold: 600;
+
+/*MIXINS*/
+@mixin transitionAll(){
+    -webkit-transition: all $transitionTime $transitionType;
+    -moz-transition: all $transitionTime $transitionType;
+    transition: all $transitionTime $transitionType;
+}
+
+@mixin transitionMaster($selector, $time, $type, $delay) {
+  -webkit-transition: $selector $time $type;
+  -moz-transition: $selector $time $type;
+  transition: $selector $time $type;
+  -moz-transition-delay: $delay;
+  -webkit-transition-delay: $delay;
+  transition-delay: $delay;
+}
+
+@mixin dropShadow(){
+  box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.08);
+}
+
+@mixin borderRadius(){
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  border-radius: 25px;
+}

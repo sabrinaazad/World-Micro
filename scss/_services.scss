@@ -1,0 +1,24 @@
+/*
+SERVICES CSS
+*/
+
+/*HERO*/
+
+.single-post {
+	padding: 2em 0 0;
+	.single-services {
+		padding: 1em 0 4em;
+	}
+}
+.card-section {
+	background-color: $lightgray;
+	h2 {
+		padding-top: 1em;
+	}
+	.card-wrapper {
+		max-width: 1370px;
+	    margin: 0 auto;
+	    padding-top: 0 !important;
+	    padding-bottom: 2em;
+	}
+}
